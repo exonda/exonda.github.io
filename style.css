@@ -1,0 +1,211 @@
+/**/
+/**/
+/*DÉBUT STYLE*/
+/**/
+/**/
+body {
+  margin: 0;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: #000000;
+  background-color: #ffffff;
+  z-index: -1;
+}
+
+.hero {
+  background: linear-gradient (0deg, #ffffff, #000000);
+  color: #000000;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem;
+}
+
+.hero-content {
+  font-family: 'Arial Narrow Bold', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 100px;
+  transition: background 0.3s ease;
+}
+
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.about .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.marquee-group {
+  display: flex;
+  white-space: nowrap;
+  animation: scroll 15s linear infinite;
+}
+
+.marquee-group span {
+  margin-right: 40px;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-size: 30px;
+}
+
+/**/
+/* Conteneur pour la vidéo et la zone cliquable */
+/**/
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        video#background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            border: none;
+            outline: none;
+            box-shadow: none;
+        }
+
+        /* Zone cliquable transparente par-dessus toute la page */
+        .clickable-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            cursor: pointer;
+            background-color: transparent;
+        }
+
+        /* Contenu éventuel (optionnel) */
+        .content {
+            position: relative;
+            z-index: 20;
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+/*page d'annimation*/
+
+   .marquee {
+      position: absolute;
+      white-space: nowrap;
+      font-size: 20px;
+      line-height: 40px;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    /* Haut */
+    .top {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      font-size: 20px;
+      animation: moveRight 20s linear infinite;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    /* Bas */
+    .bottom {
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 40px;
+      font-size: 20px;
+      animation: moveLeft 20s linear infinite;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    /* Gauche */
+    .left {
+      top: 20px;
+      bottom: 20px;
+      left: 0;
+      width: 40px;
+      font-size: 20px;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      animation: moveDown 20s linear infinite;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    /* Droite */
+    .right {
+      top: 40px;
+      bottom: 40px;
+      right: 0;
+      width: 40px;
+      font-size: 20px;
+      writing-mode: vertical-rl;
+      animation: moveUp 20s linear infinite;
+      font-family: 'Arial Narrow Bold', sans-serif;
+    }
+
+    @keyframes moveRight {
+      from { transform: translateX(-100%); }
+      to { transform: translateX(100%); }
+    }
+
+    @keyframes moveLeft {
+      from { transform: translateX(100%); }
+      to { transform: translateX(-100%); }
+    }
+
+    @keyframes moveDown {
+      from { transform: translateY(-100%); }
+      to { transform: translateY(100%); }
+    }
+
+    @keyframes moveUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(-100%); }
+    }
+
+.footer {
+  padding: 5px;
+  background-color: #ffffff;
+  text-align: center;
+  font-size: 10px;
+  color: #000000;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+
