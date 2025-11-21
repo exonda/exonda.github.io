@@ -1,0 +1,210 @@
+body{
+    background-color: #ffffff;
+}
+/**/
+/**/
+/*ENTÈTE*/
+/**/
+/**/
+i{
+    font-style: italic;
+}
+
+p{
+  font-family: Arial, sans-serif;
+}
+
+p{
+  font-family:  Arial, sans-serif;
+  color: black;
+  text-align: justify;
+  font-size: 24px;
+}
+
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/                             
+/*general header style*/
+                  .fixed-top {
+                      position: fixed;
+                      z-index: 100;
+                      background-color: #ffffff;
+                      top: 0;
+                      width: 100%;
+                  }
+                
+                  .header-spacer {
+                    height: 160px;
+                  }
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/                 
+/*header content style*/
+
+            .bandeau {
+              overflow: hidden; 
+              background: rgb(255, 255, 255);
+              height: 50px;
+              display: flex;
+              align-items: center;
+              position: relative;
+            }
+
+            .marquee-group {
+              display: flex;
+              white-space: nowrap;
+              animation: scroll 15s linear infinite;
+            }
+
+            .marquee-group span {
+              margin-right: 40px;
+              font-family: Arial, sans-serif;
+              font-size: 30px;
+              font-weight: bold;
+              display: block;
+            }
+
+            @keyframes scroll {
+              0%   { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+
+            a .bandeau{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 20px;
+                padding-left: 20px;
+            }
+
+            .content{
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: clamp(1.2rem, 5vw, 3rem);
+                width: 100%;
+            }
+
+            .bimage {
+              display: grid;
+              grid-template-columns: 1fr auto 1fr;
+              align-items: center;
+              width: 100%;
+              padding: 15px 20px;
+            }
+
+            .bimage img {
+              width: clamp(60px, 12vw, 120px);
+              height: auto;
+              justify-self: center;
+            }
+
+            /* noms */
+            .noms {
+              font-family: Arial, sans-serif;
+              font-weight: bold;
+              font-size: clamp(1.5rem, 6vw, 2.5rem);
+              white-space: nowrap;
+            }
+
+            .noms:first-child {
+              text-align: left;
+            }
+
+            .noms:last-child {
+              text-align: right;
+            }
+
+            .separator{ border: none; border-top:1px solid #000; margin:0; }
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+
+.title{
+    font-size: 35px;
+    font-weight: bold;
+}
+.text{
+    font-size: 25px;
+}
+
+/**/
+/*DENKBILD MAGAZINE*/
+.background-mag {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+  opacity: 1; /* design magazine propre */
+}
+
+.background-mag img {
+  width: 100%;
+  height: auto;
+}
+/*----------------*/
+/**/
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 0;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    z-index: 100;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+
+.grid {
+    padding: 20px;
+    grid-template-columns: 1fr 2fr 1fr; /* 3 colonnes égales */
+    grid-template-rows: auto auto; 
+    display: grid;   
+    row-gap: 1px; 
+}
+.central-content {
+    grid-column: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* divise la colonne centrale en 2 */
+    gap: 10px;
+}
+/**/
+/*STYLES DES TEXTES DE COLONES*/
+.text1{
+    grid-column: 1;
+    font-family: 'BBH Sans Bartle', Arial, sans-serif;
+}
+.text2{
+    grid-column: 2;
+    font-weight: bold;
+    text-align: left;
+}
+.text3{
+    grid-column: 3;
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+/*RESP*/
+@media (max-width: 380px) {
+  .header-spacer {
+    height: 95px;
+  }
+}
+
+/*TYPE*/
+@media (max-width: 750px) {
+
+  .title{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .text{
+      font-size: 15px;
+  }
+}
