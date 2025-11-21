@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BatisteDelattaigannt.com</title>
+    <link rel="stylesheet" href="stylepage.css"/>
+</head>
+
+<!--dropdown-->
+
+<body>
+<!---->
+<!--DÉBUT ENTÈTE-->
+
+<div class="fixed-top">
+    <div class="marquee bandeau">
+        <div class="marquee-group">
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span>
+    <!--duplication pour effet continu-->
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span><span>exon.da</span><span>exon.da</span><span>exon.da</span>
+            <span>exon.da</span>
+        </div>
+    </div>
+
+    <div class="bimage">
+        <span class="noms">Batiste</span>
+        <a href="index.html"><img src="logo1.svg" alt="logo1" width="90"></a>
+        <span class="noms">Delattaignant</span>
+    </div>
+<hr>
+</div>
+
+<div class="header-spacer"></div>
+
+<div class="background-mag">
+  <img src="BACKGROUNDS/1.png" alt="fond">
+</div>
+
+<!---->    
+<!---->
+<!--SKRIPT VOLETS-->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Dropdown À PROPOS
+  const aproposBtn = document.getElementById("apropos-btn");
+  const aproposDropdown = aproposBtn.closest('.dropdown');
+  aproposBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation(); // Empêche la propagation du clic
+    aproposDropdown.classList.toggle("open");
+  });
+
+  // Dropdown PROJETS
+  const projetsBtn = document.getElementById("projets-btn");
+  const projetsDropdown = projetsBtn.closest('.dropdown');
+  projetsBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation(); // Empêche la propagation du clic
+    projetsDropdown.classList.toggle("open");
+  });
+
+  // Dropdown CONTACTS
+  const contactBtn = document.getElementById("contact-btn");
+  const contactDropdown = contactBtn.closest('.dropdown');
+  contactBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation(); // Empêche la propagation du clic
+    contactDropdown.classList.toggle("open");
+  });
+
+  // SUPPRIMÉ : le code qui fermait les menus automatiquement
+});
+</script>
+
+<!-- ...existing code... -->
+<div class="dropdowns-row"> <!--dropdown raw-->
+
+<!--1-->
+<div class="container"> <!--container-->
+  <div class="grid">
+    <div class="column">
+    <div class="dropdown D1">
+      <p class="liens" id="apropos-btn">À PROPOS</p>
+
+      <div class="dropdown-content" id="apropos-menu">
+        <p class="apropos-text">Je m'appelles Batiste Delattaignant j'étudie le design et les arts appliqués depuis 2022.</p>
+<br>
+        <p class="apropos-text">Je me nourris constament de cette soif de découvrir et de rendre concrète chaque idée. J'essaye au travers de mes projets, de me mettre en danger et d'entreprendre le design comme un prétexte pour découvrir de nouveaux domaines : sciences, psychologie, artisanat d'art, agriculture, design industriel... Ce qui m'importe le plus c'est de montrer que l'on peut parler de tout et mettre de la lumière sur l'inconnu.</p>
+<br>
+        <p class="apropos-text">"exon.da" est un code identitaire, un pseudonyme et une vision que j'ai pensé pour me détacher de mon propre nom. c'est ce qui regroupe l'ensemble des projets de facon pluridisciplinaire et sans limites (musique, graphisme, textile, vidéo, photo...). C'est aussi une façon de me réinventer et de me libérer de mes propres contraintes. C'est un projet annexe qui verra le jour en 2026.</p>
+<br>
+        <p><a href="cv.html" class="contact-text">{Curiculum Vitae}</a></p> 
+      </div>
+    </div>
+    </div>
+  </div>
+</div> <!--container-->
+
+<!--2-->
+<div class="container"> <!--container-->
+  <div class="grid">
+    <div class="column">
+    <div class="dropdown D2">
+      <p>
+        <a href="#" class="liens" id="projets-btn">PROJETS</a>
+      </p>
+
+    <div class="dropdown-content" id="projets-menu">
+      
+    <div class="grid-two">
+      <p><a href="ivanabasic.html" class="projets1 column D1">IVANA BASIC</a></p>
+      <p class="projets2 column D2">Edition, <br> Artisanat</p>
+    </div>
+
+    <div class="grid-two column">
+      <p><a href="denkbild.html" class="projets1 column D1">DENKBILD</a></p>
+      <p class="projets2 column D2">Dessin, <br> Recherche & Création</p>
+    </div>
+
+    <div class="grid-two column">
+      <p><a href="delnkbildmagazine.html" class="projets1 column D1">DENKBILD MAGAZINE</a></p>
+      <p class="projets2 column D2">Edition, <br> Magazine</p>
+    </div>
+
+    <div class="grid-two column">
+      <p><a href="whopitcollaps.html" class="projets1 column D1">W HOP IT COLLAPS</a></p>
+      <p class="projets2 column D2">Edition Politique, <br> Sérigraphie</p>
+    </div>
+
+    <div class="grid-two column">
+      <p><a href="human.html" class="projets1 column D1">HUMAN</a></p>
+      <p class="projets2 column D2">Photographie,<br>Édition</p>
+    </div>
+
+    <div class="grid-two column">
+      <p><a href="memoires.html" class="projets1 column D1">MÉMOIRES</a></p>
+      <p class="projets2 column D2">Photographie, <br> Edition</p>
+    </div>
+
+    </div>
+
+    </div>
+    </div>
+  </div>
+</div>
+
+<!--3-->
+<div class="container"> <!--container-->
+  <div class="grid">
+    <div class="column">
+    <div class="dropdown D3">
+        <p>
+          <a href="#" class="liens" id="contact-btn">CONTACTS</a>
+        </p>
+        <div class="dropdown-content" id="contact-menu">
+
+            <div class="grid-two column">
+              <p class="contact1 column D1">INSTAGRAM</p>
+              <p><a href="https://www.instagram.com/btst.d/" class="contact2 column D2">@btst.d</a></p>
+            </div>
+
+            <div class="grid-two column">
+                <p class="contact1 column D1">TÉLÉPHONE</p>
+                <p class="contact2 column D2">06 77 07 17 49</p>
+            </div>
+
+            <div class="grid-two column">
+                <p class="contact1 column D1">E-MAIL</p>
+                <p class="contact2 column D2">exon.da@gmail.com</p>
+            </div>
+        </div>
+    </div>
+    </div>
+  </div>
+</div> <!--container-->
+
+</div> <!--dropdown raw-->
+
+        
+<footer class="footer">
+    <f>&copy; 2025 Batiste Delattaignant / exon.da - Tous droits réservés.</f>
+</footer>
+
+</body>
+
+
+</html>

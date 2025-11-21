@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Art & Design</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link href="" rel="stylesheet">
+</head>
+<!---->
+<!--CURSOR-->
+<!---->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  if ("ontouchstart" in window) return;
+
+  const cursor = document.createElement("div");
+  cursor.classList.add("custom-cursor");
+  cursor.textContent = "{click}";
+  document.body.appendChild(cursor);
+
+  document.body.style.cursor = "none";
+
+  // Suivre la souris
+  document.addEventListener("mousemove", (e) => {
+    cursor.style.left = e.clientX + "px";
+    cursor.style.top = e.clientY + "px";
+  });
+
+  // Effet "clic" visuel
+  document.addEventListener("mousedown", () => {
+    cursor.classList.add("click");
+  });
+  document.addEventListener("mouseup", () => {
+    cursor.classList.remove("click");
+  });
+
+  // Apparition progressive
+  cursor.style.opacity = "0";
+  setTimeout(() => cursor.style.opacity = "1", 200);
+});
+</script>
+<!---->
+<!--CURSOR-->
+<!---->
+<body>
+
+   <div class="video-container">
+        <video id="background-video" autoplay muted loop>
+            <source src="logo2.mp4" type="video/mp4">
+        </video>
+    </div>
+
+   <!-- Zone cliquable transparente (redirige vers "programme.html") -->
+<div class="clickable-overlay" onclick="window.location.href='page.html'"></div>
+
+  <header class="hero">
+    <div class="hero-content">
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h2></h2>
+      <p></p>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Batiste Delattaignant / exon.da - Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
