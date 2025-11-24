@@ -459,7 +459,7 @@
                                 
                                   /*content*/
                                   @media (max-width: 360px) {
-                                    .noms { font-size: 10px; }
+                                    .noms { font-size: 20px; }
                                     .bimage img { width: clamp(40px, 10vw, 60px); }
                                   }
 
