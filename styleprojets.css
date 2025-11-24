@@ -647,7 +647,7 @@ video {
                                 
                                   /*content*/
                                   @media (max-width: 360px) {
-                                    .noms { font-size: clamp(0.8rem, 6vw, 1.2rem); }
+                                    .noms { font-size: 10px; }
                                     .bimage img { width: clamp(40px, 10vw, 60px); }
                                   }
 
@@ -706,15 +706,3 @@ video {
                                     }
                                   }
                                   /*FIN RESP*/
-                                  
-                                  
-                                  
-                                  @media (max-width: 600px) {
-                                    .floating-audio-player {
-                                      width: 180px;
-                                    }
-                                  
-                                    .player-header {
-                                      font-size: 14px;
-                                    }
-                                  }
