@@ -13,7 +13,7 @@ body{
                     }
 
 .alinea {
-  text-indent: 2em; /* Crée un retrait de 2 "m" à gauche */
+  text-indent: 2em;
 }
 
 img{
