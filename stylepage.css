@@ -7,6 +7,98 @@
                 font-style: italic;
             }
 
+            .alinea {
+              text-indent: 2em;
+            }
+
+            .box{
+              background: rgba(255,255,255);
+              padding: 10px 12px;
+              margin: 6px 0;
+              display: block;
+              width: fit-content;
+              max-width: 100%;
+              line-height: 1.35;
+              border-radius: 4px;
+              box-shadow: 0 0px 0px rgb(0, 0, 0);
+            }
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+                          .block-croix {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            align-items: center;
+                            position: relative;
+                            overflow: visible; 
+                            z-index: 100;
+                          }
+
+                          .croix {
+                            position: relative;
+                            width: 0;      
+                            height: 0;
+                            z-index: 6;
+                          }
+
+                          .croix.gauche {
+                            justify-self: start;
+                            transform: translateX(-0px);
+                          }
+
+                          .croix.droite {
+                            justify-self: end;
+                            transform: translateX(0px);
+                          }
+
+                          .croix::before,
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            background: black;
+                          }
+
+                          .croix::before {
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 20px; /* dépasse davantage si tu veux */
+                            background: black;
+
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            width: 40px;
+                            height: 2px;
+                            background: black;
+                          
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .ligne {
+                            width: 20px;
+                            height: 2px;
+                            background: black;
+                            justify-self: center;
+                            align-self: center;
+                          }
+
+                          .ligne::after {
+                              width: 80px;
+                              height: 2px;
+                              left: 0;
+                              top: 50%;
+                              transform: translateY(-50%);
+                            }
+
+                          .centre {left: 1fr; right: 1fr; grid-column: 2 ;}
 /*-------------------------------------------------------------------------------------------------------------------------------*/                             
 /*general header style*/
                   .fixed-top {
@@ -192,7 +284,7 @@
                                                     .dropdowns-row {
                                                       display: grid;
                                                       grid-template-columns: repeat(3, 1fr);
-                                                      gap: 20px;
+                                                      gap: 60px;
                                                       justify-content: center;
                                                       align-items: start;
                                                       margin: 40px;
@@ -269,11 +361,6 @@
               text-align: right;
             }
 
-            .ptojets1:hover{
-            transform: translate(0,30px);
-            transition: 0.5 ease;
-            }
-
             .projets-menu{
               font-size: 100px;
             }
@@ -281,7 +368,7 @@
 /*contacts*/
             .contact1{
               font-family: Arial, sans-serif;
-              font-size: 20px;
+              font-size: 25px;
               font-weight: normal;
               text-align: left;
             }
@@ -504,10 +591,38 @@
                                     }
                                   }
 
-@media (max-width: 1080px) {
-  .background-mag {
-    background-image: url("BACKGROUNDS/2.png);
-  }
-}
+                                  @media (max-width: 750px) {
+                                  .bimage {
+                                      display: grid;
+                                      grid-template-columns: 3fr 1fr 1fr;
+                                      gap: 10px;
+                                      width: 100%;
+                                      padding: 10px 15px;
+                                    }
+                                  .noms {
+                                    font-size: 20px;
+                                  }
+
+                                    .bimage .noms:first-child {
+                                      order: 3; /* Batiste */
+                                    }
+                                    .noms:first-child {
+                                      text-align: right;
+                                    }
+                                  
+                                    .bimage img {
+                                      order: 1; /* Logo */
+                                    }
+                                  
+                                    .bimage .noms:last-child {
+                                      order: 3; /* Delattaignant */
+                                    }
+                                  }
+
+                                  @media (max-width: 750px) {
+                                    .background-mag img {
+                                      content: url("BACKGROUNDS/2.png"); 
+                                    }
+                                  }
 
 
