@@ -1,5 +1,11 @@
-                        body {  margin: 0;  font-family: Impact, Haettenschweiler, Arial, sans-serif;  color: #000000;  background-color: #ffffff;  z-index: -1;}
+                        
+                        
+                        body {  margin: 30px;  font-family: Arial, sans-serif;  color: #000000;  background-color: #ffffff;  z-index: -1;}
 
+                        p{
+                          text-align: center;
+                          font-size: 10px;
+                        }
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /*cursor*/
 
@@ -9,21 +15,20 @@
               left: 0;
               transform: translate(-50%, -50%);
               pointer-events: none; 
-              font-family: 'Arial Narrow', Arial, sans-serif;
+              font-family: Arial, sans-serif;
               font-size: 16px;
               color: #000000;
-              background: rgb(255, 255, 255);
+              background: transparent;
               border: 0px solid rgb(255, 255, 255);
               padding: 6px 10px;
-              border-radius: 15px;
+              border-radius: 1px;
               z-index: 9;
               user-select: none;
             }
 
             .custom-cursor.click {
               transform: translate(-50%, -50%) scale(0.9);
-              background: rgb(255, 255, 255);
-              color: #fff;
+              color: hsl(0, 0%, 100%);
               border-color: rgb(255, 255, 255);
             }
 
@@ -83,6 +88,93 @@
                   }
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
+
+.block-croix.down {
+  position: fixed;
+  bottom: 20px;              /* distance du bas */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;             /* au-dessus de la vidéo & overlay */
+  width: max-content;        /* respecte la largeur naturelle du bloc */
+}
+
+
+                  .block-croix {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                            align-items: center;
+                            position: relative;
+                            overflow: visible; 
+                            z-index: 1000;
+                          }
+
+                          .croix {
+                            position: relative;
+                            width: 0;      
+                            height: 0;
+                            z-index: 6;
+                          }
+
+                          .croix.gauche {
+                            justify-self: start;
+                            transform: translateX(-0px);
+                          }
+
+                          .croix.droite {
+                            justify-self: end;
+                            transform: translateX(0px);
+                          }
+
+                          .croix::before,
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            background: black;
+                          }
+
+                          .croix::before {
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 20px; /* dépasse davantage si tu veux */
+                            background: black;
+
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            width: 40px;
+                            height: 2px;
+                            background: black;
+                          
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .ligne {
+                            width: 20px;
+                            height: 2px;
+                            background: black;
+                            justify-self: center;
+                            align-self: center;
+                          }
+
+                          .ligne::after {
+                              width: 80px;
+                              height: 2px;
+                              left: 0;
+                              top: 50%;
+                              transform: translateY(-50%);
+                            }
+
+                          .centre {left: 1fr; right: 1fr; grid-column: 2 ;}
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
 /*footer style*/
 
 .footer {
@@ -93,30 +185,6 @@
   color: #000000;
   font-family: Arial, sans-serif;
 }
-
-/*-------------------------------------------------------------------------------------------------------------------------------*/
-/*repsonsive*/
-
-    @keyframes moveRight {
-      from { transform: translateX(-100%); }
-      to { transform: translateX(100%); }
-    }
-
-    @keyframes moveLeft {
-      from { transform: translateX(100%); }
-      to { transform: translateX(-100%); }
-    }
-
-    @keyframes moveDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(100%); }
-    }
-
-    @keyframes moveUp {
-      from { transform: translateY(100%); }
-      to { transform: translateY(-100%); }
-    }
-
 
 
 

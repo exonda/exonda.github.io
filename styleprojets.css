@@ -12,25 +12,102 @@ body{
                       font-size: 20px;
                     }
 
-.alinea {
-  text-indent: 2em;
-}
+                    .alinea {
+                      text-indent: 2em;
+                    }
 
-img{
-  display: block;
-}
+                    img{
+                      display: block;
+                    }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box; 
+                    }
 
-.content{
-                        padding: 20px;
+                    .content{
+                        padding: 40px;
                         font-family: Arial, sans-serif;
                         font-size: 40px;
                     }
+
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+
+                          .block-croix {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            align-items: center;
+                            position: relative;
+                            overflow: visible; 
+                          }
+
+                          .croix {
+                            position: relative;
+                            width: 0;      
+                            height: 0;
+                            z-index: 6;
+                          }
+
+                          .croix.gauche {
+                            justify-self: start;
+                            transform: translateX(-0px);
+                          }
+
+                          .croix.droite {
+                            justify-self: end;
+                            transform: translateX(0px);
+                          }
+
+                          .croix::before,
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            background: black;
+                          }
+
+                          .croix::before {
+                            content: "";
+                            position: absolute;
+                            width: 2px;
+                            height: 20px; /* dépasse davantage si tu veux */
+                            background: black;
+
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .croix::after {
+                            content: "";
+                            position: absolute;
+                            width: 40px;
+                            height: 2px;
+                            background: black;
+                          
+                            left: 0;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                          }
+
+                          .ligne {
+                            width: 20px;
+                            height: 2px;
+                            background: black;
+                            justify-self: center;
+                            align-self: center;
+                          }
+
+                          .ligne::after {
+                              width: 80px;
+                              height: 2px;
+                              left: 0;
+                              top: 50%;
+                              transform: translateY(-50%);
+                            }
+
+                          .centre {left: 1fr; right: 1fr; grid-column: 2 ;}
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -43,7 +120,6 @@ img{
   max-width: 100%;
   line-height: 1.35;
   border-radius: 4px;
-  box-shadow: 0 0px 0px rgb(0, 0, 0);
 }
 
 .legend {
@@ -183,18 +259,19 @@ video {
 
 /*-------------------------------------------------------------------------------------------------------------------------------*/
 /*grid style*/
+
 .grid-solo{
   display: grid;
-  gap: 20px;
-  padding: 0px;
+  gap: 25px;
+  padding: 10px;
   justify-content: center;
   grid-template-columns: repeat(1, 1fr);
 }
 
 .grid-two{
   display: grid;
-  gap: 20px;
-  padding: 0px;
+  gap: 25px;
+  padding: 10px;
   justify-content: center;
   grid-template-columns: repeat(2, 1fr);
 }
@@ -202,20 +279,20 @@ video {
 .grid-three {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
-  margin: 40px auto;
-  padding: 20px;
+  gap: 25px;
+  padding: 10px;
   align-items: start;
 }
 
 .grid-four {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  margin: 40px auto;
-  padding: 20px;
+  gap: 25px;
+  padding: 10px;
   align-items: start;
 }
+
+
 
 .imagestop{
   background-color: transparent;
@@ -224,15 +301,13 @@ video {
 .container {
   display: grid;
   margin: 0 auto;
-  padding: 0;
-  gap: 10px;
   width: 100%; 
   justify-content: stretch; 
 }
 
 .column {
   width: auto; 
-  padding: 8px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -252,7 +327,7 @@ video {
 
 .content-raw{
   display: grid;
-  gap: 20px;
+  gap: 60px;
   justify-content: center;
   align-items: start;
   margin: 40px;
@@ -342,7 +417,7 @@ video {
 .liens {  
   display: grid; 
   width: 100%;
-  font-size: 3vw; 
+  font-size: 2vw; 
   font-weight: bold;
   background-color: #ffffff;
   color: rgb(0, 0, 0);
@@ -492,4 +567,31 @@ video {
                                       margin: 12px 0;
                                     }
                                   }
-                                  /*FIN RESP*/
+
+                                  @media (max-width: 750px) {
+                                  .bimage {
+                                      display: grid;
+                                      grid-template-columns: 3fr 1fr 1fr;
+                                      gap: 10px;
+                                      width: 100%;
+                                      padding: 10px 15px;
+                                    }
+                                  .noms {
+                                    font-size: 20px;
+                                  }
+
+                                    .bimage .noms:first-child {
+                                      order: 3; /* Batiste */
+                                    }
+                                    .noms:first-child {
+                                      text-align: right;
+                                    }
+                                  
+                                    .bimage img {
+                                      order: 1; /* Logo */
+                                    }
+                                  
+                                    .bimage .noms:last-child {
+                                      order: 3; /* Delattaignant */
+                                    }
+                                  }
