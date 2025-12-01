@@ -1,3 +1,3 @@
-https://exonda.github.io/batistedelattaignant.github.io/
+https://exonda.github.io/
 
 portfolio 2025
