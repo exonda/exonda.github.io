@@ -530,7 +530,7 @@ video {
                                   
                                   
                                   /*GRID*/
-                                  @media (max-width: 750px) {
+                                  @media (max-width: 1080px) {
                                     .D1, .D2, .D3, .D4 {
                                       grid-column: auto !important;
                                       width: 100% !important;
